@@ -1,0 +1,13 @@
+go 1.22.5
+
+use (
+	./clases
+	./guia
+	./modulo1
+	./modulo2
+	./pruebas
+	./tdas
+	./tps/tp0
+	./tps/tp1
+	./tps/tp2
+)

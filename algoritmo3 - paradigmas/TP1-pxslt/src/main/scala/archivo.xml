@@ -1,0 +1,20 @@
+<uba>
+    <fiuba>
+        <nombre>
+            Facultad de Ingenieria UBA
+        </nombre>
+        <materias>
+            <materia codigo="TB025">
+                Paradigmas de Programación
+            </materia>
+            <materia codigo="9502">
+                Algoritmos y Programación III
+            </materia>
+        </materias>
+    </fiuba>
+    <exactas>
+        <nombre>
+            Facultad de Ciencias Exactas y Naturales UBA
+        </nombre>
+    </exactas>
+</uba>

@@ -1,0 +1,76 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+class Unidad{
+    -nombre
+    -estadisticas: Map <string, int>
+    -equipamientos: List<IEquipamiento>
+    +aplicarTerreno(terreno: ITerreno)
+}
+
+interface IEquipamiento{
+    +aplicar(unidad: Unidad)
+
+}
+class Melee implements IEquipamiento{
+    +aplicar()
+}
+
+class Range implements IEquipamiento{}
+
+class Grimorios implements IEquipamiento{}
+
+class Baculos implements IEquipamiento{}
+
+
+abstract class ITerreno{
+    +esTransitable(): Boolean
+    +ejecutarAccion()
+}
+
+class Casillero {
+    -terreno: ITerreno
+    -unidad: Unidad
+    +esTransitable(): Boolean
+    +colocarUnidad(u: Unidad)
+    +retirarUnidad()
+}
+
+abstract class TerrenoBase implements ITerreno {
+    +esTransitable(): Boolean
+    +aplicarEfecto(u: Unidad)
+}
+
+class Llanura extends TerrenoBase {}
+class Bosque extends TerrenoBase {
+    +aplicarEfecto(u: Unidad)
+}
+class Pantano extends TerrenoBase {
+    +aplicarEfecto(u: Unidad)
+}
+class Castillo extends TerrenoBase {}
+class Fuerte extends TerrenoBase {}
+class AreaContaminada extends TerrenoBase {
+    +aplicarEfecto(u: Unidad)
+}
+
+class TerrenoIntransitable implements ITerreno {
+    +esTransitable(): Boolean
+    +aplicarEfecto(u: Unidad)
+}
+
+class Agua extends TerrenoIntransitable {}
+class Enredadera extends TerrenoIntransitable {}
+class Acantilado extends TerrenoIntransitable {}
+
+class tablero{
+    celda: ArrayList<ArrayList<Casillero>>
+    +moverUnidad()
+}
+
+@enduml
+crear diseño mvc o mvp
+ui jline
+
+equipamiento por ahi se puede encargar de atacar

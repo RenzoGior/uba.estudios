@@ -1,0 +1,33 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+class Compas{
+    +dibujarCirculoConRadio(integer radio): Circulo
+}
+class Cartuchera{
+    -pinceles: List<Pincel>
+    +getPinceles(): List<Pincel>
+
+}
+class Pincel{
+    +pintar(Circulo): void
+    +seleccionarColor(Color): void
+}
+
+abstract class Color
+class Rojo Extends Color
+
+class Circulo{
+    -radio: Integer
+    calcularSuperficie()
+}
+
+Cartuchera *-- "muchos" Pincel
+Pincel --> Color
+Pincel --> Circulo
+Compas --> Circulo
+
+
+
+@enduml

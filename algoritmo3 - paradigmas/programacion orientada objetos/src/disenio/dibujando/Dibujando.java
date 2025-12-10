@@ -1,0 +1,14 @@
+package disenio.dibujando;
+
+public class Dibujando {
+    //Dibujar un posible diagrama de clases y uno de secuencia para el siguiente fragmento de código:
+    //
+    // Compas unCompas = new Compas();
+    // Circulo unCirculo = unCompas.dibujarCirculoConRadio(5);
+    // Cartuchera unaCartuchera = new Cartuchera();
+    // Pincel unPincel = unaCartuchera.getPinceles().get(2);
+    // Color unColor = new Rojo();
+    // unPincel.seleccionarColor(unColor);
+    // unPincel.pintar(unCirculo);
+    // Integer superficie = unCirculo.calcularSuperficie();
+}

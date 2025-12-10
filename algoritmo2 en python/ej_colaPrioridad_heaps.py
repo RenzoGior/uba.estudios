@@ -10,7 +10,7 @@ def calcular_posicion_hijos(pos):
 
 # Hacer el seguimiento de la función para el arreglo [ 1, 7, 2, 8, 7, 6, 3, 3, 9, 10 ].
 
-arr = [ 1, 7, 2, 8, 7, 6, 3, 3, 9, 10]
+arr = [ 1, 7, 2, 8, 7, 6, 3, 3, 9, 10] 
 
 def es_heap(arr, indice=0):
     if indice >= len(arr):
